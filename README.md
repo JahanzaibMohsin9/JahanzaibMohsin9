@@ -1,42 +1,27 @@
-# Hi, I'm Jahanzeb Mohsin
+# Jahanzeb Mohsin
 
-Full-stack developer from Pakistan. I build AI-assisted web apps, offline-first mobile apps and desktop tools, and I care about the parts that make software trustworthy: tests, measured results, and clear write-ups of how things work.
+I'm a full-stack developer in Pakistan. I build AI-powered web apps with Next.js and Postgres, offline-first mobile apps with Flutter, and the odd desktop tool in Rust or Electron. I'm looking for a developer role, remote or abroad.
 
-Open to remote roles and relocation.
+## Things I've built
 
-## Featured projects
+[**ScopeSignal**](https://github.com/JahanzaibMohsin9/scopesignal) reads an agency's signed proposal, watches the client's Slack channels, and warns the account manager when a request looks like work nobody agreed to. Before choosing defaults I benchmarked two PDF parsers and two OpenAI models. The smaller model matched the larger one's 90% accuracy at about 40% of the cost, so it became the default. The numbers are in [docs/evaluation.md](https://github.com/JahanzaibMohsin9/scopesignal/blob/main/docs/evaluation.md).
 
-| Project | What it is | Stack |
-|---|---|---|
-| [**ScopeSignal**](https://github.com/JahanzaibMohsin9/scopesignal) | Flags client requests in Slack that fall outside an agency's signed contract, citing the clause it relied on. Parser, retrieval and model choices are [benchmarked](https://github.com/JahanzaibMohsin9/scopesignal/blob/main/docs/evaluation.md). | Next.js, Supabase, pgvector, OpenAI, Slack API |
-| [**AI Support Ops Copilot**](https://github.com/JahanzaibMohsin9/ai-support-ops-copilot) | Answers support tickets from a company's own docs with cited sources, classifies tickets, and keeps a human approving every reply. | Next.js, PostgreSQL + pgvector, Prisma, OpenAI |
-| [**Ops Automation Hub**](https://github.com/JahanzaibMohsin9/ops-automation-hub) | Lead scoring and document extraction pipelines with a human review queue, HubSpot and Slack sync. | Next.js, Prisma, Trigger.dev, FastAPI, OCR |
-| [**Dukaan Book**](https://github.com/JahanzaibMohsin9/dukaan-book) | Offline-first ledger for small mobile-wallet shops: cash, EasyPaisa and JazzCash balances, expenses and day-end reports, synced when online. | Flutter, Drift, Supabase |
-| [**LAN Messenger**](https://github.com/JahanzaibMohsin9/lan-messenger) | Serverless office chat over the local network: UDP discovery, encrypted direct and group messages, file transfer and screen sharing. | Flutter (Windows), UDP/TCP, AES + HMAC |
-| [**Notes Vault**](https://github.com/JahanzaibMohsin9/notes-vault) | Encrypted Markdown vault for credentials and dev notes. Every note is AES-256-GCM encrypted, with an Argon2id-derived key that never leaves Rust. | Tauri, Rust, React |
+[**AI Support Ops Copilot**](https://github.com/JahanzaibMohsin9/ai-support-ops-copilot) answers support tickets from a company's own docs and FAQs, cites the passages it used, and pulls the customer's Stripe details into the ticket. It never sends anything on its own. Every reply is a draft until a person approves it.
 
-<details>
-<summary>More projects</summary>
+[**Ops Automation Hub**](https://github.com/JahanzaibMohsin9/ops-automation-hub) runs two pipelines. New leads are enriched, scored and synced to HubSpot. Uploaded invoices, onboarding forms and agreements go through OCR and structured extraction, then wait in a review queue before anything is exported. The OCR runs in a separate Python service.
 
-| Project | What it is | Stack |
-|---|---|---|
-| [InvoCenter](https://github.com/JahanzaibMohsin9/invocenter) | Cross-platform invoicing with offline SQLite, optional cloud sync, PDF invoices and Stripe payment links | Flutter, SQLite, Supabase |
-| [ShiftMate Pay](https://github.com/JahanzaibMohsin9/shiftmate-pay) | Rotating shift calendar and pay estimator with overtime, holiday pay and payslip checks | Flutter, Drift, Riverpod |
-| [Quiz Circle](https://github.com/JahanzaibMohsin9/quiz-circle) | Quiz app for classes with admin tools, CSV import, timed attempts and leaderboards | Flutter, Firebase |
-| [LeadMiner](https://github.com/JahanzaibMohsin9/leadminer) | Desktop lead finder with contact extraction and a Rust module for licensing and rate limiting | Electron, Playwright, Rust |
-| [WooCommerce WhatsApp Pro](https://github.com/JahanzaibMohsin9/woocommerce-whatsapp-pro) | WooCommerce order notifications over the WhatsApp Cloud API, sent in the background | PHP, WordPress, React |
-| [SubTrack](https://github.com/JahanzaibMohsin9/subtrack) | Offline subscription tracker with reminders | Flutter, SQLite |
+[**Dukaan Book**](https://github.com/JahanzaibMohsin9/dukaan-book) is a ledger for small shops that run on cash, EasyPaisa and JazzCash. The typical user has one Android phone and patchy internet, so everything works offline and syncs to Supabase when the connection comes back. Money is stored in whole paisa to avoid rounding errors.
 
-</details>
+[**LAN Messenger**](https://github.com/JahanzaibMohsin9/lan-messenger) lets computers on the same office network find each other and chat with no internet and no server. It does direct and group messages, file transfer and screen sharing. Messages are encrypted with AES-256 and authenticated with an HMAC.
 
-## Tools I work with
+[**Notes Vault**](https://github.com/JahanzaibMohsin9/notes-vault) is an encrypted Markdown vault for the passwords, API keys and server commands developers tend to leave in plain text files. Each note is encrypted with AES-256-GCM using a key derived from your master password with Argon2id. The key lives only in the Rust side of the app and is wiped when the vault locks.
 
-- **Web:** TypeScript, Next.js, React, Node.js, Tailwind CSS
-- **Mobile & desktop:** Flutter / Dart, Electron, Tauri
-- **Backend & data:** PostgreSQL, pgvector, Supabase, Prisma, SQLite / Drift, Firebase, FastAPI (Python)
-- **AI:** retrieval-augmented generation, embeddings, prompt evaluation, OpenAI API
-- **Also:** Rust, PHP / WordPress, Docker, Playwright
+I've also built [InvoCenter](https://github.com/JahanzaibMohsin9/invocenter) (invoicing for desktop, web and mobile), [ShiftMate Pay](https://github.com/JahanzaibMohsin9/shiftmate-pay) (shift calendar and pay calculator), [Quiz Circle](https://github.com/JahanzaibMohsin9/quiz-circle), [LeadMiner](https://github.com/JahanzaibMohsin9/leadminer), [WooCommerce WhatsApp Pro](https://github.com/JahanzaibMohsin9/woocommerce-whatsapp-pro) and [SubTrack](https://github.com/JahanzaibMohsin9/subtrack).
+
+## What I work with
+
+Most of my work is in TypeScript (Next.js, React, Node) and Dart (Flutter), on top of PostgreSQL with pgvector, Supabase or SQLite. For AI features I use the OpenAI API for retrieval, classification and drafting, and I test prompts and models against fixed examples before trusting them. I've also written Rust (Tauri and a napi-rs module), Python (FastAPI), PHP for WordPress, and Electron apps.
 
 ## Contact
 
-Portfolio: [jahanzaib-portfolio.pages.dev](https://jahanzaib-portfolio.pages.dev/)
+You can email me at [jahanzaibbaloch9@gmail.com](mailto:jahanzaibbaloch9@gmail.com) or find me on [LinkedIn](https://www.linkedin.com/in/jahanzeb-mohsin-a52990162/). My portfolio site is [jahanzaib-portfolio.pages.dev](https://jahanzaib-portfolio.pages.dev/).
